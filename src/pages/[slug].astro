@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Showcase from '../components/Showcase.astro';
+import Card from '../components/Card.astro';
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../post/*.md');
+
+  return posts.map(post => ({
+    params: {
+      slug: post.frontmatter.slug
+    },
+    props: {
+      post
+    }
+  }));
+}
+
+const { Content, frontmatter} = Astro.props.post
+---
+
+<Layout title={frontmatter.title}>
+  <Navbar 
+  showcase={false}
+  />
+  <Showcase title={frontmatter.title}/>
+  
+  <Card
+  title={frontmatter.title}
+  body={frontmatter.Arthur}
+  >
+    
+    
+    <Content />
+    <a href="/blog" class="btn">Go Back</a>
+  </Card>
+</Layout>
+
+<style>
+  a {
+    text-decoration: none;
+    background-color: #00425a;
+    color: #fff;
+    padding: 0 15px;
+    margin-top: 40px;
+  }
+</style>

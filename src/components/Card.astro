@@ -1,0 +1,25 @@
+---
+export interface Props {
+	title?: string;
+	body?: string;
+}
+
+const {title="Articles And Publications", body = "Article on the DNA evidence under Nigerian Law"} = Astro.props;
+---
+
+<div class="card">
+	<div class="card-text">
+		<h2 class="card-title">
+			{title}
+		</h2>
+		<p class="card-content">
+			{body}
+		</p>
+		<slot />
+	</div>
+	
+</div>
+<style>
+
+	
+</style>

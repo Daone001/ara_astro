@@ -1,0 +1,35 @@
+---
+import TableItemPrice from "./TableItemPrice.astro";
+
+const pages = [
+  {
+    icon:"description",
+    price:"1",
+    price2:"3"
+  },
+  {
+    icon:"description",
+    price:"3",
+    price2:"5"
+  },
+  {
+    icon:"description",
+    price:"5",
+    price2:"15"
+  },
+  {
+    icon:"description",
+    price:"20",
+    price2:"Higher"
+  }
+]
+---
+
+{pages.map(page => (
+  <TableItemPrice
+    icon={page.icon}
+    price={page.price}
+    price2={page.price2}
+  />
+))}
+

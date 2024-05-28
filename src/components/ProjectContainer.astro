@@ -1,0 +1,34 @@
+---
+export interface Props {
+  title?: string,
+  subtitle?: string,
+}
+const {title, subtitle} = Astro.props;
+---
+
+<div class="profile-container">
+  <h3>{title}</h3>
+  <div class="items">
+    <slot/>
+  </div>
+</div>
+
+<style>
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-container h3 {
+    font-size: 2rem;
+  }
+
+  .items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+</style>

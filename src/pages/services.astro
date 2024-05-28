@@ -1,0 +1,72 @@
+---
+import Showcase from '../components/Showcase.astro';
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+import Dropdown from '../components/Dropdown.astro';
+import Card from '../components/Card.astro';
+const dropdowns = [
+  {
+    title: "UI/UX design",
+    body: "User Experience/ User Interface create designs providing the best experience possible in terms of usability and aesthetics (typography, color palettes, and others)."
+  },
+  {
+    title: "Web Applications",
+    body: "Web applications covers a range of services which includes the following: static websites, blogs, dynamic website, API ingestion, content management systems, and many more. Applications are built and designed to be compatible with multiple devices."
+  },
+  {
+    title: "Mobile Applications",
+    body: "These are referred to as apps, with a large percentage of the population viewing content on their mobile devices this has become an essential commodity for any market. Mobile Apps assist in creating an identity for your company on your customer's media market. Mobile Apps are built using Native (iOS and/or Android) or Hybrid (Mobile + Web)."
+  },
+  {
+    title: "E-commerce",
+    body: "With how big online marketing has become it is only right to seperate eCommerce from Web and Mobile applications as their are other design methods to accomplisshing this goal. For example one of the biggest platform for eCommerce is shopify and they provide clients with tools to build and manage their inventory on the platform. We are here to assist with the design and configuration of you stores resulting in increase sales and revenue. Building solutions such as MEAN and MERN eCommerce stores, WordPress via woo Commerce, Shopify stores, and more."
+  },
+  {
+    title: "Cloud Architecture",
+    body: "Designing cloud infrastructure and multiple platforms such as Amazon Web Services, Microsoft Azure, Google Could Platform, Salesforce and other, maintenance of directories, optimization of resources, security, cost of optimization, migration of storage and databases. Education of clients in this environments, so it is easier for them to navigate and provision essential resources when needed."
+  },
+  {
+    title: "Social Media",
+    body: "Social media is a big portion of our daily lives, we spend a few hours on here getting our news, comedy, stories, and sometimes inspirations from content creators. It essential to optimize this resource and take advantage of its availability, using platforms such as X former known as Twitter, Facebook, LinkedIn, Whatsapp, Instagram, even TikTok. Social media is not just a space for marketing, it has become a place where companies are able to have interpersonal relationships with their clients."
+  },
+  {
+    title: "Graphic Design",
+    body: "Graphic design covers a range of services that keep companies looking professional. These includes Logo or Trademark designs, letterheads, flyers, brochures, presentations, media editing (Photo and video), and other media related designs. Ara Global Technology works closely with clients to generate the best results possible for their projects."
+  },
+  {
+    title: "Hosting and Maintenance",
+    body: "Ara Global Technology caan host your content and provide proper maintenance to your resources, we do not just design, configure, and deploy. We are able to host and maintain the resources required to house your project(s). We do not just stop there, you are able to migrate your resource from one platform to another if required."
+  },
+  {
+    title: "Ads",
+    body: "Different platforms have their strength when it comes to adverts with the most popular platforms being facebook and Google. Google Ads help with displaying ads on multiple platforms such as Google search engine, Youtube, Gmail, and other google services. With Facebook ads you are able to create a website like design with images and videos to visualize you products. Action buttons to help with completing transaction."
+  },
+  {
+    title: "Search Engine Optimization",
+    body: "This requires designing a well optimized application that follows the rules of search engine optimization such as adding your robots.txt file, sitemap(s), making use of tools such as Google search console, using the correct html tags and labeling thing properly so that it is not just plesant to humans but also search engines."
+  },
+  {
+    title: "Education",
+    body: "Ara Global Technology has carefully curated curriculum and structure to assist willing learns to advancing the world of technology in subject matters such as web development, Databases, Frontend frameworks (Angular, React, Vue, Astro, and others), Backend using NodeJs and NextJs, Graphics design, Ads services, and other tools to assign technology enthusiasts in achieving their goals."
+  }
+]
+---
+<Layout title='Ara Global Technology: Services offered by Ara Global Technology'>
+  <Navbar 
+    showcase={true}
+  />
+  <Showcase 
+    showcase={true}
+    showcaseLink='/'
+    title="Ara Global Technolgy Services"
+    content='Making your technical dreams a reality'
+    image='https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  />
+  {dropdowns.map(dropdown => (
+    <Dropdown 
+    title={dropdown.title}
+    body={dropdown.body}
+  />
+  ))}
+  
+</Layout>

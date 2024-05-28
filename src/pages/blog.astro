@@ -1,0 +1,25 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+import CardBtn from '../components/CardBtn.astro';
+import Showcase from '../components/Showcase.astro'
+
+const posts = await Astro.glob('../post/*.md');
+---
+
+<Layout title="Ara Global Technology: Blogs and Articles">
+  <Navbar 
+  showcase={false}
+  />
+ <Showcase title="Ara Global Technology: Blog Posts"/>
+    {posts.map(post => (
+      <CardBtn 
+      title={post.frontmatter.title}
+      body={post.frontmatter.excerpt}
+      href={`/${post.frontmatter.slug}`}
+      />
+      
+    ))}
+  
+
+</Layout>

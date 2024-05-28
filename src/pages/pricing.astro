@@ -1,0 +1,29 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+import Showcase from '../components/Showcase.astro'
+import Card from '../components/Card.astro'
+import StaticPricing from '../components/StaticPricing.astro';
+
+---
+<Layout>
+  <Navbar 
+  showcase={false}
+  />
+  <Showcase 
+  title='Ara Global Technology: Pricing'
+  />
+  <Card
+    title='Pricing Information'
+    body='The pricing model has been created to fit different projects and services provided by Ara Global Technology. Providing one time payment options and monthly payment plans. View the table below to see the plan that best fits your project. For more information about services offerings, view our blog post about services offerings from Ara Global Services.'
+  />
+  <Card 
+    title='Services Breakdown'
+    body='The services offered by Ara Global Services are based on the type of project being requested by the client. These includes services such as Static Websites, MERN Stack deployments, MEAN Stack deployments, Content Management Systems (WordPress, Shopify, SquareSpace, Wix, and others).'
+  />
+  <Card
+      title="Stack Applications" 
+      body="This is different from static Web Apps in the sense that it makes use of API ingestions, backend such as NodeJS, database with an example being MongoDB. These applications belong to stacks defined as MEAN (Mongo ExpressJS Angular NodeJS) Stack, MERN (Mongo ExpressJS ReactJS NodeJS), JAM (JavaScript API and Markup) Stack. Giving your Web application a more robust feel and functionality."
+      />
+  <StaticPricing />
+</Layout>

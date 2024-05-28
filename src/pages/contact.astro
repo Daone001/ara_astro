@@ -1,0 +1,32 @@
+---
+import Showcase from "../components/Showcase.astro";
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import ContactForm from '../components/ContactForm.astro'
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Ara Global Technology: Contact us for details">
+<Navbar 
+  showcase={false}
+/>
+<Showcase 
+  showcase={false}
+  title="Contact Us"
+/>
+<div class="contact-card">
+  <Card 
+  title="Contact Ara Global Technolgy"
+  body="For all inquiries on your technical needs or questions about our services as listed on our services page, please complete the form below and we will contact you as soon as possible. Thank you for your consideration."
+/>
+</div>
+
+<ContactForm />
+</Layout>
+
+<style>
+  .contact-card {
+    text-align: center;
+  }
+  
+</style>

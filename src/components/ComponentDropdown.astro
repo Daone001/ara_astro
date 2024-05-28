@@ -1,0 +1,84 @@
+---
+export interface Props {
+ title?: string;
+ href?: string;
+ body?: string;
+ add?: string;
+ remove?: string;
+}
+const { title, body, add='add', remove='remove', href }=Astro.props
+---
+<div class="section-dropdown">
+  <div class="dropdown-nav">
+    <h3 class="dropdown-title">{title}</h3>
+    <span class="material-icons add active">
+      {add}
+      </span>
+      <span class="material-icons remove">
+        {remove}
+        </span>
+  </div>
+  <div class="apps">
+    <slot />
+  </div>   
+</div>
+
+<style>
+  .apps{
+    display: none;
+  }
+  .apps.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+  }
+  .dropdown-nav {
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px 0;
+    background-color: #eee;
+    border: 1px solid #bbb;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .dropdown-nav:hover {
+    transition: all 0.3s ease;
+    scale: 0.99;
+  }
+
+  .dropdown-nav .add,
+  .dropdown-nav .remove{
+    display: none;
+  }
+
+  .dropdown-nav .add.active,
+  .dropdown-nav .remove.active {
+    display: block;
+    font-size: 2rem;
+    border: 2px solid #222;
+    border-radius: 50%;
+
+  }
+</style>
+
+<script>
+  const dropdownSections = document.querySelectorAll('.section-dropdown');
+  const dropdownIconAdd = document.querySelectorAll('.dropdown-nav .add');
+  const apps = document.querySelectorAll('.apps')
+  const dropdownIconRemove = document.querySelectorAll('.dropdown-nav .remove');
+  const dropdownNavs = document.querySelectorAll('.dropdown-nav');
+  const tables = document.querySelectorAll('table');
+  dropdownSections.forEach((dropdownSection, idx) => {
+    dropdownNavs[idx].addEventListener('click', () => {
+      dropdownIconAdd[idx].classList.toggle('active')
+      dropdownIconRemove[idx].classList.toggle('active')
+      apps[idx].classList.toggle('active')
+
+})
+  })
+  
+</script>

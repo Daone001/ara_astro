@@ -1,0 +1,61 @@
+---
+export interface props {
+  price?: String,
+  price2?: String,
+  icon?: String
+}
+const {price, price2, icon="attach_money"} = Astro.props;
+const prices = [
+  {
+    price:"3k",
+    price2:"5k"
+  },
+  {
+    price:"8k",
+    price2:"10k"
+  },
+  {
+    price:"12k",
+    price2:"25k"
+  },
+  {
+    price:"30k",
+    price2:"Higher"
+  }
+]
+---
+
+  <td class="table_price"><p><span class="material-icons">{icon}</span> {price} - {price2}</p></td>
+
+
+<style>
+  td.table_price {
+    
+    padding: 15px;
+      border-collapse: collapse;
+      background: rgba( 18, 50, 89, 0.25 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 4px );
+      -webkit-backdrop-filter: blur( 4px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+      margin: 15px 0;
+  }
+  .table_price p {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    font-size: 18px;
+    color: #000;
+  }
+  @media  (max-width:636px) {
+    .table_price p {
+      font-size: 13px;
+    }
+
+    .table_price .material-icons {
+      font-size: 14px;
+    }
+  }
+</style>

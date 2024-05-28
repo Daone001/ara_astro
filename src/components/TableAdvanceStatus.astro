@@ -1,0 +1,24 @@
+---
+import TableItemIcon from "./TableItemIcon.astro";
+
+const Advancestatuses = [
+  {
+    status: false
+  },
+  {
+    status: true
+  },
+  {
+    status: true
+  },
+  {
+    status: true
+  }
+]
+---
+
+{Advancestatuses.map(status => (
+  <TableItemIcon
+    status={status.status}
+  />
+))}

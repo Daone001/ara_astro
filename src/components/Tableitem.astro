@@ -1,0 +1,42 @@
+---
+export interface Props {
+  icon?: String,
+  body?: String
+}
+const {icon, body} = Astro.props;
+---
+  <td>
+    <p>
+      <span class="material-icons">{icon}</span> <span>{body}</span>
+    </p>
+    
+  </td>
+
+  <style>
+    td {
+      padding: 15px;
+      border-collapse: collapse;
+      background: rgba( 18, 50, 89, 0.25 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 4px );
+      -webkit-backdrop-filter: blur( 4px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: row;
+      font-size: 18px;
+    }
+    
+    @media screen and (max-width: 636px) {
+      p {
+        font-size: 12px;
+      }
+      p .material-icons {
+        font-size: 16px;
+      }
+    }
+  </style>

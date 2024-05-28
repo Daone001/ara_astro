@@ -1,0 +1,87 @@
+---
+export interface Props {
+  icon?: String,
+  body?: String,
+  headerTitle?: String
+}
+const {headerTitle,title, body} = Astro.props;
+const headers = [
+  {
+    title:"Services",
+    body:"Offerings"
+  },
+  {
+    title:"Basic",
+    body:"Most Selected"
+  },
+  {
+    title:"Advanced",
+    body:"Most Requested"
+  },
+  {
+    title:"Premium",
+    body:"For Projects"
+  },
+  {
+    title:"Extended",
+    body:"Enterprise"
+  }
+]
+---
+<h2 class="table_header">{headerTitle}</h2>
+{headers.map(header => (
+  <th>
+    <h3>{header.title}</h3> <p>{header.body}</p>
+  </th>
+))}
+
+<style>
+  th {
+    background-color: #eee;
+    /* border-radius: 5px 5px 0 0; */
+    text-align: center;
+    padding: 15px;
+    border-collapse: collapse;
+    background: rgba( 74, 144, 226, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  h3 {
+    font-size: 38px;
+    font-weight: bolder;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.22);
+    letter-spacing: normal;
+    padding: 0 10px;
+    border-radius: 5px;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .table_header {
+    margin-bottom: 30px;
+    font-size: 48px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 636px) {
+    h3 {
+      font-size: 16px;
+    }
+
+    p {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .table_header {
+    margin-bottom: 15px;
+    font-size: 30px;
+    text-align: center;
+  }
+  }
+</style>

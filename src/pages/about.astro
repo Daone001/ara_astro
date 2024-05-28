@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Showcase from "../components/Showcase.astro";
+import Navbar from "../components/Navbar.astro";
+import ModalCard from "../components/ModalCard.astro";
+import ModalPreviewCard from "../components/ModalPreviewCard.astro";
+const modals = [
+  {
+    Image: "https://images.unsplash.com/photo-1488229297570-58520851e868?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Ara Global Technology",
+    openIcon: "add",
+    summary: "Ara Global Technology started as a personal challenge in 2017, a goal to discover ones limit to creativity. On this journey Ara Global Technology has been able to assist multiple client achieve their web goals...",
+    body: "Ara Global Technology started as a personal challenge in 2017, a goal to discover ones limit to creativity. On this journey Ara Global Technology has been able to assist multiple client achieve their web goals in terms of a space to call their own and customer outreach. From the architecture of cloud environments to the development and design of various applications encompassing multiple industries such as healthcare, engineering, law, technology, vocational, to mention a few. Using design methods and mechanisms to fulfill client goals such as Content Management Systems (CMS), MEAN-stack applications, MERN-stack application, API creation and ingestion, JAMstack, along with other tools and resources.",
+  },
+  {
+    Image: "https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Projects and Implementation",
+    openIcon: "add",
+    summary: "Ara Global Technology emphasizes creating solutions for clients where we breakdown our processes in a manner in which it is easier digested by our clients. We offer a range of services which includes...",
+    body: "Ara Global Technology emphasizes creating solutions for clients where we breakdown our processes in a manner in which it is easier digested by our clients. We offer a range of services which includes and is not limited to the following: Content Management Systems (CMS [examples: WordPress, Wix, Shopify]), MERNstack projects, MEANstack projects. JAMstack projects, Astro Static Web Applications, Cloud Architecture (Amazon Web Service, Microsoft Azure, Google Cloud Platform), Resource maintenance and management, Search Engine Optimization (SEO), Google Ads Services, social media page creation, social media account creation, social media management, database designs and schemas, graphic design, creation and consumption of APIs.",
+  },
+  {
+    Image: "https://images.unsplash.com/uploads/1413387158190559d80f7/6108b580?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Expectations",
+    openIcon: "add",
+    summary: "We at Ara Global Technology hold ourselves to very high standards and as such delivery our services in the same manner. These levels permeate to our employees and work environment...",
+    body:"We at Ara Global Technology hold ourselves to very high standards and as such delivery our services in the same manner. These levels permeate to our employees and work environment, we work to provide the best services as deserved by our clients; such as technical advise, education on how to use resources, optimization of services, and documentation. Clients are provided with detailed reports on thier environment regarding maintenance, upgrades, updates, search results, and others depending on client's level of service."
+  }
+]
+---
+<Layout title="Ara Global Technology: About Ara Global Technology">
+  <Navbar 
+  showcase={false}
+  />
+  <Showcase 
+  showcase={false}
+  title="About"
+  />
+  {modals.map(modal => (
+    <ModalCard 
+    Image={modal.Image}
+    title={modal.title}
+    openIcon={modal.openIcon}
+    summary={modal.summary}
+    body={modal.body}
+    />
+
+  ))}
+
+  <!-- <slot /> -->
+</Layout>

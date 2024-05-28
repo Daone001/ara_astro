@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Showcase from '../components/Showcase.astro';
+import ComponentDropdown from '../components/ComponentDropdown.astro';
+import DadJokes from '../components/DadJokes.astro';
+import AnimatedNav from '../components/AnimatedNav.astro';
+import DrinkWater from '../components/DrinkWater.astro';
+import Feedback from '../components/Feedback.astro';
+import ContentPlaceHolder from '../components/ContentPlaceHolder.astro';
+import FormWaveAnimation from '../components/FormWaveAnimation.astro';
+import GoodCheapFast from '../components/GoodCheapFast.astro';
+import FAQApp from '../components/FAQApp.astro';
+import QuizApplication from '../components/QuizApplication.astro';
+import ProjectContainer from '../components/ProjectContainer.astro';
+import ProjectProfile from '../components/ProjectProfile.astro';
+---
+<Layout title='Ara Global Technology: Projects by Ara Global Technology'>
+  <Navbar 
+  showcase={false}
+  />
+  <Showcase 
+  showcase={false}
+  title="Our Projects"
+  />
+  <ComponentDropdown title='Live Projects'>
+    <ProjectContainer title='Websites'>
+      <ProjectProfile 
+        name="Havy Consulting LLC"
+        href="https://havyconsult.com/"
+        image="https://d3pay1tz4x23rf.cloudfront.net/Management/Havy_Logo_Cool_45.webp"
+      />
+      <ProjectProfile 
+        name="AAF Legal Practitioners"
+        href="https://aaflegalpractice.com/"
+        image="https://aaflegalpractice.com/images/AAF_logo_edit.jpg"
+      />
+      <ProjectProfile 
+        name="Yanis Healthcare"
+        href="https://yanishealthcare.org/"
+        image="https://yanishealthcare.org/Images/yanis_logo.webp"
+      />
+      <ProjectProfile 
+        name="Foot Me"
+        href="https://footme.org/"
+        image="https://footme.org/images/Footme%20Logo%20webiste.png"
+      />
+      
+    </ProjectContainer>
+    
+  </ComponentDropdown>
+
+  <ComponentDropdown title='Framework Projects'>
+    <ProjectContainer title='React'>
+      <ProjectProfile 
+        name="Github Finder"
+        href="https://githubfinder587789954.netlify.app/"
+        image="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=2088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      />
+    </ProjectContainer>
+  </ComponentDropdown>
+  
+  <ComponentDropdown
+  title='Dad Jokes'>
+  <DadJokes />
+  </ComponentDropdown>
+  <ComponentDropdown title="Animated Navigation">
+    <AnimatedNav />
+  </ComponentDropdown>
+  <ComponentDropdown title='Drink Water App'>
+    <DrinkWater />
+  </ComponentDropdown>
+  <ComponentDropdown title='FAQ Application'>
+    <FAQApp />
+  </ComponentDropdown>
+  <ComponentDropdown title='Feedback UI'>
+    <Feedback />
+  </ComponentDropdown>
+  <ComponentDropdown title='Content Placeholders'>
+    <ContentPlaceHolder />
+  </ComponentDropdown>
+  <ComponentDropdown title='Form Wave Animation'>
+    <FormWaveAnimation />
+  </ComponentDropdown>
+  <ComponentDropdown title='Toggle Application'>
+    <GoodCheapFast />
+  </ComponentDropdown>
+  <ComponentDropdown title='Quiz App'>
+    <QuizApplication />
+  </ComponentDropdown>
+
+</Layout>

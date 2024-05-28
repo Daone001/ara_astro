@@ -1,0 +1,17 @@
+---
+import TableHeader from "./TableHeader.astro";
+export interface Props {
+  headerTitle?: String
+}
+const {headerTitle="Static Web Applications",title, body} = Astro.props;
+
+---
+
+
+  <tr>
+  <TableHeader />
+</tr>
+
+ <style>
+  
+ </style>

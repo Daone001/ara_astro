@@ -1,0 +1,43 @@
+<ul class="menu">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/pricing">Pricing</a></li>
+  <li><a href="/blog">Blog</a></li>
+  <li><a href="/services">Services</a></li>
+  <li><a href="/contact">Contact</a></li>
+</ul>
+
+<style>
+
+  li {
+    padding: 15px 10px;
+  }
+
+  li:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+
+  li a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 636px) {
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    li {
+      text-align: center;
+      width: 80%;
+      border-radius: 4px;
+    }
+
+    li:hover {
+      border: 2px solid rgba(255, 255, 255, 0.45);
+    }
+  }
+</style>

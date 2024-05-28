@@ -1,0 +1,99 @@
+---
+import Tableitem from "./Tableitem.astro";
+import TableItemPrice from "./TableItemPrice.astro";
+import TableRangeInput from "./TableRangeInput.astro";
+import TableBasicStatus from "./TableBasicStatus.astro";
+import TableAdvanceStatus from "./TableAdvanceStatus.astro";
+import TablePremiumStatus from "./TablePremiumStatus.astro";
+import TableExtendedStatus from "./TableExtendedStatus.astro";
+
+const prices = [
+  {
+    icon:"attach_money",
+    price:"3k",
+    price2:"5k"
+  },
+  {
+    price:"8k",
+    price2:"10k"
+  },
+  {
+    price:"12k",
+    price2:"25k"
+  },
+  {
+    price:"30k",
+    price2:"Higher"
+  }
+]
+
+---
+<tr>
+  <Tableitem 
+  icon="paid"
+  body="Pricing"
+  />
+  {prices.map(p => (
+    <TableItemPrice
+      price={p.price}
+      price2={p.price2}
+    />
+  ))}
+</tr>
+<tr>
+  <Tableitem 
+  icon="description"
+  body="Pages"
+  />
+  <TableRangeInput />
+</tr>
+<tr>
+  <Tableitem 
+  icon="design_services"
+  body="Design"
+  />
+  <TableBasicStatus />
+</tr>
+<tr>
+  <Tableitem 
+  icon="devices"
+  body="Responsive"
+  />
+  <TableBasicStatus />
+</tr>
+
+<tr>
+  <Tableitem 
+  icon="send"
+  body="Deployment"
+  />
+  <TableBasicStatus />
+</tr>
+<tr>
+  <Tableitem 
+  icon="language"
+  body="Domain"
+  />
+  <TableAdvanceStatus />
+</tr>
+<tr>
+  <Tableitem 
+  icon="shop"
+  body="Applications"
+  />
+  <TablePremiumStatus />
+</tr>
+<tr>
+  <Tableitem 
+  icon="draw"
+  body="Wireframe"
+  />
+  <TablePremiumStatus />
+</tr>
+<tr>
+  <Tableitem 
+  icon="support_agent"
+  body="Support"
+  />
+  <TableExtendedStatus />
+</tr>
