@@ -46,7 +46,7 @@ const headers = [
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
+    border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
   h3 {
@@ -69,18 +69,23 @@ border-radius: 10px;
   }
 
   @media screen and (max-width: 636px) {
+    th {
+      padding: 7px;
+      border-radius: 5px;
+    }
     h3 {
-      font-size: 16px;
+      font-size: 12px;
+      padding: 0;
     }
 
     p {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 8px;
   }
 
   .table_header {
     margin-bottom: 15px;
-    font-size: 30px;
+    font-size: 12px;
     text-align: center;
   }
   }
