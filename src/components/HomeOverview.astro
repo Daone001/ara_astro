@@ -2,31 +2,32 @@
 import SmallCard from '../components/SmallCard.astro';
 
 const overview = [
-   {
-    title: "Top Services",
-    icon: "library_books",
-    body: "Ara global technology provides premium web and mobile application services that satisfy the needs of our clients. In turn gives guidiance, growth, management of resources, data, and availability."
+  {
+    title: 'Top Services',
+    icon: 'library_books',
+    body: 'Ara global technology provides premium web and mobile services to meet the needs of our clients. Additionally, we provide guidance, growth, management, data, and availability of resources.',
   },
   {
-    title:"Excellent Delivery",
-icon: "record_voice_over",
-body: "Communication between parties is very important in any endevor, so it is a big priority of ours to offer our potential customers top level communication and communication channels."
+    title: 'Excellent Delivery',
+    icon: 'record_voice_over',
+    body: 'We bet on ourselves to deliver top-notch services, while carrying our clients through the process. Ara global technology makes communication a top priority, so our clients do not have to worry about it.',
   },
   {
-    title: "Team Work",
-icon: "groups",
-body: "Depending on the scope of the project being analyzed, the best team is put in place to work on the task in place so the all timelines and expectations are met in delivering our client's vision."
-  }
-]
+    title: 'Team Work',
+    icon: 'groups',
+    body: 'Our team set up is guided by the type of project we are working on. Teams are assigned tasks they are optimized to perform, meeting sprint and story timelines, and providing the expected results.',
+  },
+];
 ---
 
 <div class="row-even">
-  {overview.map(overviewcards => (
-    <SmallCard 
-    title={overviewcards.title}
-    icon={overviewcards.icon}
-    body={overviewcards.body}
-    />
-  ))}
-
+  {
+    overview.map((overviewcards) => (
+      <SmallCard
+        title={overviewcards.title}
+        icon={overviewcards.icon}
+        body={overviewcards.body}
+      />
+    ))
+  }
 </div>

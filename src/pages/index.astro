@@ -8,30 +8,22 @@ import CardBtn from '../components/CardBtn.astro';
 ---
 
 <Layout title="Ara Global Technology">
-	<Navbar 
-		showcase={true}
-		/>
-	<Showcase 
-		showcase={true}
-		showcaseLink="/"
-	/>
-	<HomeOverview />
-	<HomeBlogPreview />
-	<CardBtn 
-	 title='Projects'
-	 body='View the different projects completed by Ara Global Technology. These includes live and demo applications created by our developers with different industries in mind.'
-	 href='/projects'
-	 linkTitle='Projects'
-	/>
-	
+  <Navbar showcase={true} />
+  <Showcase showcase={true} showcaseLink="/services" />
+  <HomeOverview />
+  <HomeBlogPreview />
+  <CardBtn
+    title="Projects"
+    body="Visit our projects page which hosts a few of the projects Ara Global Technology developers have worked on over the years."
+    href="/projects"
+    linkTitle="Projects"
+  />
 </Layout>
 
 <style>
-
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
 </style>

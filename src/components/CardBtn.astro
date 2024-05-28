@@ -1,33 +1,39 @@
 ---
 export interface Props {
-	title?: string;
-	body?: string;
+  title?: string;
+  body?: string;
   href?: string;
   linkTitle?: string;
 }
 
-const {title="Articles And Publications", body = "Article on the DNA evidence under Nigerian Law", href, linkTitle= "Read more"} = Astro.props;
+const {
+  title = 'Articles And Publications',
+  body = 'Article on the DNA evidence under Nigerian Law',
+  href,
+  linkTitle = 'Read more',
+} = Astro.props;
 ---
 
 <div class="card">
-	<div class="card-text">
-		<h2 class="card-title">
-			{title}
-		</h2>
-		<p class="card-content">
-			{body}
-		</p>
+  <div class="card-text">
+    <h2 class="card-title">
+      {title}
+    </h2>
+    <p class="card-content">
+      {body}
+    </p>
     <a href={href}>{linkTitle}</a>
-	</div>
+  </div>
 </div>
 <style>
   .card-text a {
-    background-color: #4E6E81;
+    background-color: #4e6e81;
     color: #eee;
     padding: 10px 25px;
     border-radius: 5px;
     box-shadow: 1px 1px rgba(0, 0, 0, 0.13);
     cursor: pointer;
+    text-decoration: none;
   }
   .card-text a:hover {
     border: 2px solid #fff;
