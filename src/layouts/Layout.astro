@@ -1,28 +1,45 @@
 ---
-import '../styles/global.css'
+import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 export interface Props {
-	title?: string;
+  title?: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="https://s3.amazonaws.com/araglobaltech.com/images/Ara+New+Logo+2+(400+X+225).png" style="background-color: steelblue; height: 14px; width: 12px"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Ara Global Technology new web application displaying new services offered by the information technology company."
+    />
+    <meta
+      name="keywords"
+      content="Ara Global Technology, Information Technolgy, About Ara Global Technolgy, Ara Global Tech, Static Web Apps, Mobile Apps, applications, Tech Projects, Projects, Web Stack Applications, Mobile Applications, Ara Global Technology Blog, Ara Global Technology Contact"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://s3.amazonaws.com/araglobaltech.com/images/Ara+New+Logo+2+(400+X+225).png"
+      style="background-color: steelblue; height: 14px; width: 12px"
+    />
 
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	</head>
-	<body>
-		
-		<slot />
-		<Footer />
-	</body>
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <slot />
+    <Footer />
+  </body>
 </html>
