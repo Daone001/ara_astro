@@ -1,29 +1,25 @@
 ---
 import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
-import Showcase from '../components/Showcase.astro'
-import Card from '../components/Card.astro'
+import Showcase from '../components/Showcase.astro';
+import Card from '../components/Card.astro';
 import StaticPricing from '../components/StaticPricing.astro';
-
 ---
+
 <Layout>
-  <Navbar 
-  showcase={false}
-  />
-  <Showcase 
-  title='Ara Global Technology: Pricing'
+  <Navbar showcase={false} />
+  <Showcase title="Ara Global Technology: Pricing" />
+  <Card
+    title="Pricing Information"
+    body="Ara Global Technology’s price chart was designed with consideration of different project requirements in mind. Pricing was curated to provide potential clients with an idea of what it takes to implement projects of a particular scope. Popularly demanded services were analyzed and we came up with the best possible method of pricing our services. Note this is an estimate of what services should cost. Prices can change based on client’s requirements and service requests. View our blog posts on these subject for more information."
   />
   <Card
-    title='Pricing Information'
-    body='The pricing model has been created to fit different projects and services provided by Ara Global Technology. Providing one time payment options and monthly payment plans. View the table below to see the plan that best fits your project. For more information about services offerings, view our blog post about services offerings from Ara Global Services.'
-  />
-  <Card 
-    title='Services Breakdown'
-    body='The services offered by Ara Global Services are based on the type of project being requested by the client. These includes services such as Static Websites, MERN Stack deployments, MEAN Stack deployments, Content Management Systems (WordPress, Shopify, SquareSpace, Wix, and others).'
+    title="Services Breakdown"
+    body="Ara Global Technology specializes in JavaScript based projects, using frameworks and libraries such as React, Vue, Astro, Angular, and others. With our vast knowledge in this space, we deliver web and mobile applications having features like Static Websites, MongoDB Express React NodeJS (MERN) Stack deployments, MongoDB Express Angular NodeJS (MEAN) Stack deployments, and JavaScript API Management (JAM) Stack. Other areas will include Content Management Systems (CMS) using popular platforms like (WordPress, Shopify, Squarespace, and WIX), building iOS applications using Swift and hybrid app using Native with (React or Angular) and utilizing Google’s Flutter to deployment mobile applications."
   />
   <Card
-      title="Stack Applications" 
-      body="This is different from static Web Apps in the sense that it makes use of API ingestions, backend such as NodeJS, database with an example being MongoDB. These applications belong to stacks defined as MEAN (Mongo ExpressJS Angular NodeJS) Stack, MERN (Mongo ExpressJS ReactJS NodeJS), JAM (JavaScript API and Markup) Stack. Giving your Web application a more robust feel and functionality."
-      />
+    title="Stack Applications"
+    body="Stack applications classified by Ara Global Technology are applications that make use of Application Program Integration (APIs) and/or Database(s). Building CRUD – Create, Read, Update, and Delete applications using tools such as Frameworks and backend languages to interact between your frontend and backend programming. Applications being used for these purposes include NodeJS, ExpressJS, Python, and NextJS. These arrays of applications allow for the creation of the MERN, MEAN, and JAM Stack applications."
+  />
   <StaticPricing />
 </Layout>
