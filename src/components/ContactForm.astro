@@ -15,21 +15,22 @@ const { name, email, phone, message } = Astro.props;
       <label for="fullname"
         ><span class="material-icons">person</span> Full name</label
       >
-      <input type="text" id="fullname" name="fullname" />
+      <input type="text" id="fullname" name="fullname" required />
     </div>
     <div class="form-row">
       <label for="email"><span class="material-icons">mail</span> Email</label>
-      <input type="email" id="email" name="email" />
+      <input type="email" id="email" name="email" required />
     </div>
     <div class="form-row">
       <label for="phone"><span class="material-icons">phone</span> Phone</label>
-      <input type="text" id="phone" name="phone" />
+      <input type="text" id="phone" name="phone" required />
     </div>
     <div class="form-row">
       <label for="message"
         ><span class="material-icons">message</span> Message</label
       >
-      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      <textarea name="message" id="message" cols="30" rows="10" required
+      ></textarea>
     </div>
     <div class="form-row">
       <button class="btn">
