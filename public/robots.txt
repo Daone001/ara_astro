@@ -20,4 +20,4 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
-sitemap: https://app.araglobaltech.com/sitemap.xml
+Sitemap: https://app.araglobaltech.com/sitemap.xml
