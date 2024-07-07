@@ -1,66 +1,58 @@
 ---
 import CardBtn from '../components/CardBtn.astro';
 import ListDropdrown from './ListDropdrown.astro';
-const serviceList= [
-{
-    title: "UI/UX",
-    itemList1: [
-      "AdobeXD",
-      "HTML",
-      "CSS3",
-      "JavaScript"
-    ]
+const serviceList = [
+  {
+    title: 'UI/UX',
+    itemList1: ['AdobeXD', 'HTML', 'CSS3', 'JavaScript'],
   },
   {
-    title: "eCommerce",
+    title: 'eCommerce',
     itemList1: [
-      "NodeJS",
-      "ReactJS",
-      "ExpressJS",
-      "MongoDB",
-      "Shopify",
-      "WordPress"
-    ]
+      'NodeJS',
+      'ReactJS',
+      'ExpressJS',
+      'MongoDB',
+      'Shopify',
+      'WordPress',
+    ],
   },
   {
-    title: "Storage & Database",
+    title: 'Storage & Database',
     itemList1: [
-      "Simple Storage Service (S3)",
-      "MongoDB",
-      "Postgresql",
-      "Mysql",
-      "DynamoDB",
-    ]
+      'Simple Storage Service (S3)',
+      'MongoDB',
+      'Postgresql',
+      'Mysql',
+      'DynamoDB',
+    ],
   },
   {
-    title: "Additional Tools",
-    itemList1: [
-      "Bootstrap [V4, V5]",
-      "Materialize",
-      "Tailwind",
-      "Media query"
-    ]
-  }
-]
+    title: 'Additional Tools',
+    itemList1: ['Bootstrap [V4, V5]', 'Materialize', 'Tailwind', 'Media query'],
+  },
+];
 ---
+
 <div class="row">
-  <h2>Technolgy and Services</h2>
+  <h2>Technology and Services</h2>
   {
-    serviceList.map(serviceList => (
-      <ListDropdrown 
+    serviceList.map((serviceList) => (
+      <ListDropdrown
         title={serviceList.title}
         listItem1={serviceList.itemList1}
       />
     ))
   }
 
-<style>
-  .row h2{
-    font-size: 2.3rem;
-  }
-  @media screen and (max-width: 636px) {
-    .row h2{
-    font-size: 2rem;
-  }
-  }
-</style>
+  <style>
+    .row h2 {
+      font-size: 2.3rem;
+    }
+    @media screen and (max-width: 636px) {
+      .row h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</div>

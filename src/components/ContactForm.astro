@@ -11,6 +11,8 @@ const { name, email, phone, message } = Astro.props;
 <section class="section-contact">
   <form>
     <h2>Contact Us</h2>
+    <div class="success-response"></div>
+    <div class="failure-response"></div>
     <div class="form-row">
       <label for="fullname"
         ><span class="material-icons">person</span> Full name</label
@@ -19,9 +21,8 @@ const { name, email, phone, message } = Astro.props;
         type="text"
         id="fullname"
         name="fullname"
-        required
         placeholder="Jane Doe"
-        oninvalid="this.setCustomValidity('Enter Full name here')"
+        required
       />
     </div>
     <div class="form-row">
@@ -32,7 +33,6 @@ const { name, email, phone, message } = Astro.props;
         name="email"
         required
         placeholder="janedoe@gmail.com"
-        oninvalid="this.setCustomValidity('Enter email address here')"
       />
     </div>
     <div class="form-row">
@@ -43,7 +43,6 @@ const { name, email, phone, message } = Astro.props;
         name="phone"
         required
         placeholder="xxx-xxx-xxxx"
-        oninvalid="this.setCustomValidity('Enter phone number here')"
       />
     </div>
     <div class="form-row">
@@ -55,10 +54,8 @@ const { name, email, phone, message } = Astro.props;
         id="message"
         cols="30"
         rows="10"
-        required
         placeholder="Enter your messsage here..."
-        oninvalid="this.setCustomValidity('Enter your message here')"
-      ></textarea>
+        required></textarea>
     </div>
     <div class="form-row">
       <button class="btn">
@@ -90,8 +87,6 @@ const { name, email, phone, message } = Astro.props;
       style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"
     ></textarea>
   </div>
-  <div class="success-response"></div>
-  <div class="failure-response"></div>
 </section>
 
 <style>
@@ -112,7 +107,7 @@ const { name, email, phone, message } = Astro.props;
     padding: 40px;
     border-radius: 8px;
     margin: 60px 0;
-    width: 22%;
+    width: 35%;
     box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
   }
 
@@ -214,17 +209,17 @@ const { name, email, phone, message } = Astro.props;
           // get the response body (the method explained below)
           formSuccessMessage();
           // Set all form inputs to empty.
-          setTimeout(() => {
-            fullName.value = '';
-            email.value = '';
-            phone.value = '';
-            message.value = '';
-          }, 10000);
         }
         // }
       } catch (error) {
         console.error('Error:', error);
       }
+      // setTimeout(() => {
+      //   fullName.value = '';
+      //   email.value = '';
+      //   phone.value = '';
+      //   message.value = '';
+      // }, 10000);
     };
 
     sendEmail(url, fullBody);
