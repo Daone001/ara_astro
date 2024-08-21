@@ -93,6 +93,14 @@ ul {
   z-index: 1;
 }
 
+img[alt=Google_Business_View],
+img[alt=Ara_Global_Technology_Logo],
+img[alt=Google_Business_review] {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
 @media screen and (max-width: 636px) {
   .card-text {
     width: 100%;
